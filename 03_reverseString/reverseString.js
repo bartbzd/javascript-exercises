@@ -5,4 +5,8 @@ const reverseString = function (str) {
   return joinArray;
 };
 
+const reverseString2 = function (str) {
+  return str.split("").reverse().join("");
+};
+
 module.exports = reverseString;

@@ -3,7 +3,7 @@ const sumAll = function (num1, num2) {
     return "ERROR";
   }
   if (num1 > num2) {
-    //rearranage num1 and num2
+    //rearranage num1 and num2 (tip from solution)
     const temp = num1;
     num1 = num2;
     num2 = temp;

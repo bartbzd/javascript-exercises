@@ -1,22 +1,14 @@
-//declare function with arguments
 const removeFromArray = function (arr, ...args) {
-  //create variable to capture ...args
-  let n;
-  //create new array to not change original
-  let newArr = arr.slice();
-  //loop / increment through array length
+  let n
+  let newArr = arr.slice()
   for (let i = 0; i < arr.length; i++) {
-    //store returned ...arg index in n
-    n = newArr.indexOf(args[i]);
-    //ensure n exists and if it does, run code
+    n = newArr.indexOf(args[i])
     if (n > -1) {
-      //splice out 1 element from new array, starting at n
-      newArr.splice(n, 1);
+      newArr.splice(n, 1)
     }
   }
-  //return new array with removed elements
-  return newArr;
-};
+  return newArr
+}
 
 //Example solution
 // const removeFromArray = function (array, ...toRemove) {
@@ -29,4 +21,22 @@ const removeFromArray = function (arr, ...args) {
 //   }
 //   return modifiedArray;
 // };
-module.exports = removeFromArray;
+
+// Example solution 2 - Simple
+// const removeFromArray = function (...args) {
+//   const array = args[0]
+//   const newArray = []
+//   array.forEach((item) => {
+//     if (!args.includes(item)) {
+//       newArray.push(item)
+//     }
+//   })
+//   return newArray
+// }
+
+// Example solution 3 - Advanced
+// const removeFromArray = function (...args) {
+//   const array = args[0]
+//   return array.filter((val) => !args.includes(val))
+// }
+module.exports = removeFromArray

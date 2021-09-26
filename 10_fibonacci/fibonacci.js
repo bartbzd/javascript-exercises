@@ -13,10 +13,11 @@ const fibonacci = (fib) => {
 
 //alternate solution
 function fibo(n) {
-  return n < 1 ? 0 : n <= 2 ? 1 : fibo(n - 1) + fibo(n - 2);
+  return n < 0 ? "OOPS" : n < 1 ? 0 : n <= 2 ? 1 : fibo(n - 1) + fibo(n - 2);
 }
 
 function fib(a) {
+  if (a < 0) return "OOPS";
   if (a < 1) return 0;
   if (a <= 2) return 1;
   return fib(a - 1) + fib(a - 2);
@@ -36,6 +37,3 @@ const fibo2 = function (count) {
 };
 
 (module.exports = fibonacci), fibo, fibo2, fib;
-
-//start with 1 + 1 = num
-//

@@ -1,5 +1,5 @@
-const getTheTitles = (books) => {
-  return books.map((book) => `${book.title}`);
+const getTheTitles = (arr) => {
+  return arr.map((x) => x.title);
 };
 
 module.exports = getTheTitles;
